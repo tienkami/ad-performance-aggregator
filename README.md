@@ -139,7 +139,7 @@ mvn test
 ### Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/ad-performance-aggregator.git
+git clone https://github.com/tienkami/ad-performance-aggregator.git
 cd ad-performance-aggregator
 ```
 
