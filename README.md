@@ -134,20 +134,27 @@ results/
 mvn test
 ```
 
-## Docker
+## Running with Docker
 
-Build image:
+### Clone Repository
+
+```bash
+git clone https://github.com/<your-username>/ad-performance-aggregator.git
+cd ad-performance-aggregator
+```
+
+### Build Docker Image
 
 ```bash
 docker build -t ad-aggregator .
 ```
 
-Run container:
+### Run Container
 
 ```bash
 docker run --rm \
-  -v "$(pwd)/data:/data" \
-  -v "$(pwd)/results:/results" \
+  -v /path/to/input:/data \
+  -v /path/to/output:/results \
   ad-aggregator \
   --input /data/ad_data.csv \
   --output /results/
