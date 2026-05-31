@@ -1,0 +1,69 @@
+============================================================
+AD PERFORMANCE AGGREGATOR - BENCHMARK LOG
+=========================================
+
+## Benchmark Environment
+
+| Component | Specification |
+|------------|------------|
+| CPU | Intel Core i5-1335U (13th Gen) |
+| RAM | 16 GB |
+| Operating System | Windows 10 |
+| Dataset Size | ~1 GB |
+| Dataset Records | 26,843,544 |
+
+---
+
+## PROGRESS LOG
+
+[PROGRESS] Processed 1,000,000 records  | Heap Usage: 137.89 MB
+[PROGRESS] Processed 2,000,000 records  | Heap Usage: 135.97 MB
+[PROGRESS] Processed 3,000,000 records  | Heap Usage: 103.96 MB
+[PROGRESS] Processed 4,000,000 records  | Heap Usage: 41.98 MB
+[PROGRESS] Processed 5,000,000 records  | Heap Usage: 159.94 MB
+[PROGRESS] Processed 6,000,000 records  | Heap Usage: 23.96 MB
+[PROGRESS] Processed 7,000,000 records  | Heap Usage: 104.46 MB
+[PROGRESS] Processed 8,000,000 records  | Heap Usage: 185.46 MB
+[PROGRESS] Processed 9,000,000 records  | Heap Usage: 49.46 MB
+[PROGRESS] Processed 10,000,000 records | Heap Usage: 130.48 MB
+[PROGRESS] Processed 11,000,000 records | Heap Usage: 210.94 MB
+[PROGRESS] Processed 12,000,000 records | Heap Usage: 74.93 MB
+[PROGRESS] Processed 13,000,000 records | Heap Usage: 155.93 MB
+[PROGRESS] Processed 14,000,000 records | Heap Usage: 19.93 MB
+[PROGRESS] Processed 15,000,000 records | Heap Usage: 100.43 MB
+[PROGRESS] Processed 16,000,000 records | Heap Usage: 181.93 MB
+[PROGRESS] Processed 17,000,000 records | Heap Usage: 45.93 MB
+[PROGRESS] Processed 18,000,000 records | Heap Usage: 126.94 MB
+[PROGRESS] Processed 19,000,000 records | Heap Usage: 207.93 MB
+[PROGRESS] Processed 20,000,000 records | Heap Usage: 71.44 MB
+[PROGRESS] Processed 21,000,000 records | Heap Usage: 152.44 MB
+[PROGRESS] Processed 22,000,000 records | Heap Usage: 16.44 MB
+[PROGRESS] Processed 23,000,000 records | Heap Usage: 97.44 MB
+[PROGRESS] Processed 24,000,000 records | Heap Usage: 177.93 MB
+[PROGRESS] Processed 25,000,000 records | Heap Usage: 41.94 MB
+[PROGRESS] Processed 26,000,000 records | Heap Usage: 122.95 MB
+
+---
+
+## FINAL SUMMARY
+
+Total Valid Records Aggregated : 26,843,544
+Total Malformed Records        : 0
+
+Execution Time                : 4.67 seconds
+
+Baseline Heap Usage           : 1.48 MB
+Peak Heap Usage               : 217.00 MB
+
+---
+
+## OBSERVATIONS
+
+* Heap usage remained bounded throughout execution.
+* Memory usage fluctuated as the JVM garbage collector reclaimed temporary objects.
+* No evidence of unbounded memory growth was observed during processing.
+* Processing completed successfully without malformed records.
+
+============================================================
+END OF REPORT
+=============
