@@ -28,22 +28,22 @@ Anyway, I fixed it and changed the artifact-id to ad-performance-aggregator. The
 1. Stuffing everything inside the Main class is unacceptable as it is violating every single one of the SOLID principles. As much as its straightforward to read and comprehend, and probably most suitable when it comes to solving these kinds of challenges, but I'm more familiar with enterprise/production systems, so  help me rewrite it according to the below checklist:
     + Must comply to the SOLID principles (separate the CSV reader and the aggregation logic from the main class)
     + Must be testable and implement unit testing. I'm using JUnit 4.13.2 (remember to comment clearly on the test case choices)
-2. The console output is neat, but it lacks transparency. 
-=========================================
-Processing completed in: 4.71 seconds
-Peak Isolated JVM Heap Allocated: 181.00 MB
-=========================================
+2. The console output is neat, but it lacks transparency.<br>
+=========================================<br>
+Processing completed in: 4.71 seconds<br>
+Peak Isolated JVM Heap Allocated: 181.00 MB<br>
+=========================================<br>
 The processing time is within the ideal range, but for how many records processed? We have the peak heap allocation, but what about the minimum? And this can't be considered a log. A log should record the benchmark between intervals, for example, every second of the total process, every n rows out of the total number of records
 
 ## 📈 Session 4: Performance Variance Evaluation & Different Approaches Comparison
-- **Prompt:** The refactored code produces the following metrics:
-================ PERFORMANCE EXECUTION DASHBOARD ================
-Total Valid Records Aggregated : 26,843,544 rows
-Total Malformed Rows Dropped   : 0 rows
-Total Execution Elapsed Time   : 4.67 seconds
-Baseline Memory Footprint      : 1.48 MB
-Peak Isolated Peak Heap usage  : 217.00 MB
-=================================================================
+- **Prompt:** The refactored code produces the following metrics:<br>
+================ PERFORMANCE EXECUTION DASHBOARD ================<br>
+Total Valid Records Aggregated : 26,843,544 rows<br>
+Total Malformed Rows Dropped   : 0 rows<br>
+Total Execution Elapsed Time   : 4.67 seconds<br>
+Baseline Memory Footprint      : 1.48 MB<br>
+Peak Isolated Peak Heap usage  : 217.00 MB<br>
+=================================================================<br>
 The Peak Heap usage jumped from 181.00 MB to 217.00 MB, which is not very significant. But I want to know what caused this. 
 
 - **Prompt:** I see. But will this be a problem when the system is scaled up, for instance, if the file size increased from 1GB to 50GB, will the current design work? If this module is integrated into an existing system, what do I need to notice here? 
